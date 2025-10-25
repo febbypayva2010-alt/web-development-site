@@ -1,0 +1,165 @@
+/* Fonts + Reset */
+body {
+  margin: 0;
+  font-family: "Orbitron", "Press Start 2P", sans-serif;
+  color: #e0e0ff;
+  background: radial-gradient(circle at center, #120025 0%, #000010 100%);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Y2K grid background */
+.bg-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -1;
+  animation: moveGrid 10s linear infinite;
+}
+
+@keyframes moveGrid {
+  from { background-position: 0 0; }
+  to { background-position: 40px 40px; }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #7b00ff, #00f0ff);
+  box-shadow: 0 0 30px #00ffff88;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-family: "Press Start 2P";
+  font-size: 18px;
+  color: white;
+  text-shadow: 0 0 8px #00ffff, 0 0 20px #ff00ff;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+/* Theme button */
+#themeToggle {
+  background: #000;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: "Press Start 2P";
+  font-size: 10px;
+}
+
+#themeToggle:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+/* Sections */
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+h2 {
+  text-shadow: 0 0 10px #ff00ff;
+  color: #fff;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #00ffff33;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff00ffaa;
+}
+
+/* Button */
+button {
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  border: none;
+  color: black;
+  font-family: "Press Start 2P";
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+/* Scroll button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff00ff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff00ff88;
+}
+
+#scrollTopBtn:hover {
+  background: #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #7b00ff, #00f0ff);
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  color: white;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+/* Dark theme */
+body.dark {
+  background: radial-gradient(circle at center, #000020, #0f0018 100%);
+}
